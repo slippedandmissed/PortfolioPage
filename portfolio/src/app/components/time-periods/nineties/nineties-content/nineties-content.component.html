@@ -1,0 +1,35 @@
+<h1>{{section.title}}</h1>
+
+<hr>
+
+<div id="entriesHR">
+    <div>
+        <span id="arrow">ᐁ</span>
+        <span id="label">Check it out!</span>
+    </div>
+</div>
+
+<div id="entries">
+    <div class="entry" *ngFor="let project of section.projects">
+        <div>
+            <img class="icon" [src]="getIcon(project.type)" [alt]="project.type">
+        </div>
+        <div>
+            <div class="heading">
+                {{project.name}}
+            </div>
+            <div class="description">
+                {{project.description}}
+            </div>
+            <div class="link" *ngIf="project.downloadURL">
+                <a target="_blank" [href]="project.downloadURL">Download</a>
+            </div>
+            <div class="link" *ngIf="project.githubURL">
+                <a target="_blank" [href]="project.githubURL">GitHub</a>
+            </div>
+            <div class="link" *ngIf="project.liveURL">
+                <a target="_blank" [href]="project.liveURL">Visit</a>
+            </div>
+        </div>
+    </div>
+</div>

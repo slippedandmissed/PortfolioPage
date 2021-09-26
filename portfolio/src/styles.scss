@@ -1,1 +1,33 @@
-/* You can add global styles to this file, and also import other style files */
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+}
+
+body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    filter: blur(0.5px); // I know, it's awful.
+}
+
+button, input, textarea {
+    font-size: inherit
+}
+
+a, button:not(:disabled) {
+    cursor: pointer;
+}
+
+p {
+    margin: 0;
+}
+
+app-root {
+    width: 100%;
+}

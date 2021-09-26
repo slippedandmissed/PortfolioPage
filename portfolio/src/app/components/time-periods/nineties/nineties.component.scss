@@ -1,0 +1,106 @@
+main {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr 4fr;
+    font-size: min(1.5em, 5vw);
+    background-color: rgb(255, 248, 235);
+    position: relative;
+}
+
+$navbar-color: rgb(151, 0, 0);
+
+#navbar {
+    background-color: $navbar-color;
+    height: 100%;
+    color: white;
+    text-shadow: 2px 2px black;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    
+    #pronouns {
+        display: block;
+        text-align: center;
+        font-style: italic;
+        text-decoration: underline;
+        margin: 10px auto 40px auto;
+    }
+
+
+    #title-button {
+        display: block;
+        margin: 40px auto 0 auto;
+    }
+
+    #links {
+        display: flex;
+        flex-direction: column;
+
+        text-align: center;
+
+        align-items: center;
+        justify-content: flex-start;
+
+        
+    }
+    hr {
+        margin-top: auto;
+        width: 90%;
+        box-shadow: 2px 2px black;
+    }
+
+    :last-child {
+        margin-bottom: 10px;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+
+        &:not(:first-child) {
+            margin-top: 10px;
+        }
+    }
+
+    button {
+        color: inherit;
+        background-color: $navbar-color;
+        border-width: 3px;
+        border-color: white darkred darkred white;
+    }
+
+}
+
+#date {
+    font-size: min(0.8em, 3vw);
+    font-weight: bold;
+    position: absolute;
+    top: 2px;
+    right: 10px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    border: 1px solid black;
+    border-left: none;
+    border-radius: 0 5px 5px 0;
+    overflow: hidden;
+
+    > * {
+        padding: 5px 10px;
+    }
+
+    #month {
+        display: inline-block;
+        min-width: 100px;
+        background: linear-gradient(to right, transparent 0%, red 30%);
+        text-align: right;
+        padding-left: 10px;
+    }
+
+    #day {
+        display: inline-block;
+        background-color: black;
+        color: white;
+    }
+}

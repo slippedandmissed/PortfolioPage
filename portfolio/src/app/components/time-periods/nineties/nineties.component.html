@@ -1,0 +1,22 @@
+<main>
+    <div id="navbar">
+
+        <button id="title-button" (click)="buttonClicked()">{{personal.name}}</button>
+        <p id="pronouns">{{personal.pronouns}}</p>
+
+        <div id="links">
+            <a *ngFor="let section of sections" [routerLink]="[section.path]">{{section.title}}</a>
+        </div>
+        <hr>
+        <div id="contact">
+            <a [href]="'mailto:'+personal.email">{{personal.email}}</a>
+        </div>
+    </div>
+    <div id="content">
+        <router-outlet></router-outlet>
+    </div>
+    <div id="date">
+        <div id="month">{{month}}</div>
+        <div id="day">{{day}}</div>
+    </div>
+</main>
