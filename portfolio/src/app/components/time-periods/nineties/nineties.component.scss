@@ -10,8 +10,10 @@ main {
 $navbar-color: rgb(151, 0, 0);
 
 #navbar {
+    top: 0;
+    position: sticky;
     background-color: $navbar-color;
-    height: 100%;
+    height: 100vh;
     color: white;
     text-shadow: 2px 2px black;
 
