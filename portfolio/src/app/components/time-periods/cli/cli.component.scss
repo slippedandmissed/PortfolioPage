@@ -12,8 +12,10 @@ main {
     color: white;
     font-family: "Inconsolata", monospace;
     cursor: text;
-    font-size: 1.5em;
+    font-size: min(1.5em, 5vw);
     overflow-x: hidden;
+    word-break: break-all;
+
 }
 
 .prompt {
@@ -29,7 +31,6 @@ main {
         font-weight: bold;
     }
 
-    word-break: break-all;
 }
 
 #prompt {
