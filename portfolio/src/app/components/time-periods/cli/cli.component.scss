@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&display=swap");
+
+*:focus {
+    outline: none;
+}
+
+main {
+    padding: 1em;
+    width: 100%;
+    min-height: 100%;
+    background-color: rgb(29, 29, 29);
+    color: white;
+    font-family: "Inconsolata", monospace;
+    cursor: text;
+    font-size: 1.5em;
+    overflow-x: hidden;
+}
+
+.prompt {
+    width: 100%;
+
+    .hostname {
+        color: lime;
+        font-weight: bold;
+    }
+
+    .pwd {
+        color: rgb(0, 81, 255);
+        font-weight: bold;
+    }
+
+    word-break: break-all;
+}
+
+#prompt {
+    .command {
+        display: inline;
+        min-width: 1px;
+    }
+}
+:host ::ng-deep {
+    .project-title {
+        font-weight: bold;
+        color: rgb(0, 217, 255);
+    }
+
+    .project-description {
+        color: pink;
+    }
+
+    a {
+        color: inherit;
+    }
+}

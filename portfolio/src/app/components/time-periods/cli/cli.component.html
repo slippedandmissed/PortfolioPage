@@ -1,1 +1,10 @@
-<p>cli works!</p>
+<main #main (click)="clicked()" (keydown.Tab)="tabComplete(); false;" (keydown.Enter)="parseCommand(); false;" (keydown.ArrowUp)="historyBack(); false;" (keydown.ArrowDown)="historyForwards(); false;">
+    <div #log ></div>
+    <div class="prompt" #prompt id="prompt">
+        <span class="hostname">{{username}}@{{hostname}}</span>
+        <span class="separator">:</span>
+        <span class="pwd">{{getPWDString()}}</span>
+        <span class="marker">{{marker}}&nbsp;</span>
+        <span class="command" contenteditable="true"></span>
+    </div>
+</main>
