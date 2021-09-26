@@ -1,6 +1,6 @@
 main {
     display: grid;
-    height: 100%;
+    min-height: 100%;
     grid-template-columns: 1fr 4fr;
     font-size: min(1.5em, 5vw);
     background-color: rgb(255, 248, 235);
@@ -10,10 +10,10 @@ main {
 $navbar-color: rgb(151, 0, 0);
 
 #navbar {
-    top: 0;
     position: sticky;
+    top: 0;
     background-color: $navbar-color;
-    height: 100vh;
+    height: var(--window-height);
     color: white;
     text-shadow: 2px 2px black;
 

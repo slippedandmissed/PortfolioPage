@@ -1,0 +1,16 @@
+$selector-height: 50px;
+
+#view {
+    --window-height: calc(100vh - #{$selector-height});
+    height: var(--window-height);
+    overflow: auto;
+}
+
+#period-selector {
+    height: 50px;
+    background-color: blue;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
