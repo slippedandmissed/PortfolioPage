@@ -82,6 +82,20 @@ hr,
 
         .heading {
             font-weight: bold;
+
+            display: flex;
+            align-items: center;
+
+            .unfinished {
+                background-color: red;
+                text-transform: uppercase;
+                font-size: 0.6em;
+                color: white;
+                padding: 2px 5px;
+                letter-spacing: 3px;
+                margin-left: 10px;
+            }
+    
         }
 
         .link {
@@ -92,5 +106,6 @@ hr,
             max-width: 50px;
             margin-right: 20px;
         }
+
     }
 }

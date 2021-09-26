@@ -17,6 +17,7 @@
         <div>
             <div class="heading">
                 {{project.name}}
+                <span class="unfinished" *ngIf="project.unfinished">Unfinished</span>
             </div>
             <div class="description">
                 {{project.description}}
