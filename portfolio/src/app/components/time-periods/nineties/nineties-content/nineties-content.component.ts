@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { projectType, Section, sectionFromPath, sections } from 'src/app/data/sections';
+import { Project, projectType, Section, sectionFromPath, sections } from 'src/app/data/sections';
 
 @Component({
   selector: 'app-nineties-content',
@@ -23,8 +23,11 @@ export class NinetiesContentComponent implements OnInit {
     });
   }
 
-  public getIcon(type: projectType): string {
-    switch (type) {
+  public getIcon(project: Project): string {
+    if (!!project.iconSrc) {
+      return project.iconSrc;
+    }
+    switch (project.type) {
       case "java":
         return "/assets/icons/java_old.svg";
       case "pdf":

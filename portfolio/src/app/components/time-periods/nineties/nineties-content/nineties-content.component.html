@@ -12,7 +12,7 @@
 <div id="entries">
     <div class="entry" *ngFor="let project of section.projects">
         <div>
-            <img width="50px" class="icon" [src]="getIcon(project.type)" [alt]="project.type">
+            <img width="50px" class="icon" [src]="getIcon(project)" [alt]="project.type">
         </div>
         <div>
             <div class="heading">
@@ -30,6 +30,9 @@
             </div>
             <div class="link" *ngIf="project.liveURL">
                 <a target="_blank" [href]="project.liveURL">Visit</a>
+            </div>
+            <div class="link" *ngIf="project.amazonURL">
+                <a target="_blank" [href]="project.amazonURL">See on Amazon</a>
             </div>
         </div>
     </div>
