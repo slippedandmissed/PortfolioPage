@@ -5,12 +5,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './components/app.component';
 import { NinetiesComponent } from './components/time-periods/nineties/nineties.component';
 import { NinetiesContentComponent } from './components/time-periods/nineties/nineties-content/nineties-content.component';
+import { CliComponent } from './components/time-periods/cli/cli.component';
+import { PrehistoricComponent } from './components/time-periods/prehistoric/prehistoric.component';
+import { ModernComponent } from './components/time-periods/modern/modern.component';
+import { FuturisticComponent } from './components/time-periods/futuristic/futuristic.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NinetiesComponent,
-    NinetiesContentComponent
+    NinetiesContentComponent,
+    CliComponent,
+    PrehistoricComponent,
+    ModernComponent,
+    FuturisticComponent
   ],
   imports: [
     BrowserModule,

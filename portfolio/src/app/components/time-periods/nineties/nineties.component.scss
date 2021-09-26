@@ -5,6 +5,7 @@ main {
     font-size: min(1.5em, 5vw);
     background-color: rgb(255, 248, 235);
     position: relative;
+    filter: blur(0.5px); // I know, it's awful.
 }
 
 $navbar-color: rgb(151, 0, 0);
