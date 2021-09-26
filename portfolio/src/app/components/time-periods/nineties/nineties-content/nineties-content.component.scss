@@ -74,6 +74,8 @@ hr,
         display: flex;
         align-items: center;
 
+        max-width: 100%;
+
 
 
         &:not(:last-child) {
@@ -103,8 +105,8 @@ hr,
         }
 
         .icon {
-            width: 50px;
-            margin-right: 20px;
+            width: min(50px, 6vw);
+            margin-right: min(20px, 3vw);
         }
 
     }

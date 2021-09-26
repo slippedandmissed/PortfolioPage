@@ -65,7 +65,7 @@ export const sections: Section[] = [
                 githubURL: "https://github.com/slippedandmissed/Wafflecone",
             },
             {
-                name: "IHaveAnxietyMakeCallsForMe",
+                name: "I Have Anxiety, Make Calls For Me",
                 description: "A website where introverts can get other people to make appointments or phone calls on their behalf.\nPart of a challenge to make a website in 10 hours.",
                 type: "website",
                 githubURL: "https://github.com/slippedandmissed/IHaveAnxietyMakeCallsForMe",
