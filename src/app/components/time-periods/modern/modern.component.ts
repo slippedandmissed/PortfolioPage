@@ -1,9 +1,16 @@
+import { trigger } from '@angular/animations';
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { leftRightSlider } from 'src/app/data/animations';
+import { sections } from 'src/app/data/sections';
 
 @Component({
   selector: 'app-modern',
   templateUrl: './modern.component.html',
-  styleUrls: ['./modern.component.scss']
+  styleUrls: ['./modern.component.scss'],
+  animations: [
+    trigger("routeAnimations", leftRightSlider)
+  ]
 })
 export class ModernComponent implements AfterViewInit {
 
@@ -58,6 +65,12 @@ export class ModernComponent implements AfterViewInit {
         this.wiggle(x, a.length);
       });
     }
+  }
+
+  sections = sections;
+
+  prepareRoute(outlet: RouterOutlet) {
+    return outlet?.activatedRouteData?.['animation'];
   }
 
 }

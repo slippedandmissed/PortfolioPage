@@ -1,0 +1,39 @@
+<div id="content">
+    <div class="card" *ngFor="let project of section.projects">
+        <div class="card-top">
+            <div class="icon">
+                <img [src]="getIcon(project)" [alt]="project.type">
+            </div>
+            <div class="text">
+                <div class="title">
+                    {{project.name}}
+                </div>
+                <div class="description">
+                    {{project.description}}
+                </div>
+            </div>
+        </div>
+        <div class="screenshot" *ngIf="project.screenshotSrc">
+            <img [src]="project.screenshotSrc" [alt]="project.name">
+        </div>
+        <div class="links">
+            <a *ngIf="project.downloadURL" [href]="project.downloadURL" target="_blank">
+                <fa-icon [icon]="faDownload"></fa-icon>
+                Download
+            </a>
+            <a *ngIf="project.githubURL" [href]="project.githubURL" target="_blank">
+                <fa-icon [icon]="faGithub"></fa-icon>
+                GitHub
+            </a>
+            <a *ngIf="project.liveURL" [href]="project.liveURL" target="_blank">
+                <fa-icon [icon]="faShare"></fa-icon>
+                Visit
+            </a>
+            <a *ngIf="project.amazonURL" [href]="project.amazonURL" target="_blank">
+                <fa-icon [icon]="faAmazon"></fa-icon>
+                View on Amazon
+            </a>
+        </div>
+
+    </div>
+</div>

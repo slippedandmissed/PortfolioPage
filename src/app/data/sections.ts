@@ -10,6 +10,7 @@ export interface Project {
     liveURL?: string;
     amazonURL?: string;
     iconSrc?: string;
+    screenshotSrc?: string
 }
 
 export interface Section {
@@ -43,20 +44,23 @@ export const sections: Section[] = [
                 name: "CAUSE",
                 description: "A social media platform connecting protesters to the organizers in a safe and secure way.",
                 type: "website",
-                liveURL: "https://cause.cx/"
+                liveURL: "https://cause.cx/",
+                screenshotSrc: "/assets/screenshots/cause.png"
             },
             {
                 name: "Original Spin",
                 description: "The homepage for a manufacturer and supplier of gifts.",
                 type: "website",
-                liveURL: "https://original-spin.com/"
+                liveURL: "https://original-spin.com/",
+                screenshotSrc: "/assets/screenshots/os.png"
             },
             {
                 name: "IcedGabriel",
                 description: "Unofficial University of Cambridge programming challenges.",
                 type: "website",
                 githubURL: "https://github.com/Cause-App/IcedGabriel",
-                liveURL: "https://icedgabriel.com/"
+                liveURL: "https://icedgabriel.com/",
+                screenshotSrc: "/assets/screenshots/icedgabriel.png"
             },
             {
                 name: "Wafflecone",
@@ -69,13 +73,15 @@ export const sections: Section[] = [
                 description: "A website where introverts can get other people to make appointments or phone calls on their behalf.\nPart of a challenge to make a website in 10 hours.",
                 type: "website",
                 githubURL: "https://github.com/slippedandmissed/IHaveAnxietyMakeCallsForMe",
-                liveURL: "https://ihaveanxietymakecallsforme.com"
+                liveURL: "https://ihaveanxietymakecallsforme.com",
+                screenshotSrc: "/assets/screenshots/anxiety.png"
             },
             {
                 name: "NoVals Code Golf",
                 description: "Write your code in as few characters as possible without using any raw values.",
                 type: "website",
-                liveURL: "http://novals.co.uk"
+                liveURL: "http://novals.co.uk",
+                screenshotSrc: "/assets/screenshots/novals.png"
             },
             {
                 name: "ConeSpace",
@@ -104,7 +110,8 @@ export const sections: Section[] = [
                 description: "A sudoku-setting engine to help design sudoku puzzles.",
                 type: "website",
                 githubURL: "https://github.com/slippedandmissed/KiddoJS",
-                liveURL: "http://kiddojs.herokuapp.com/"
+                liveURL: "http://kiddojs.herokuapp.com/",
+                screenshotSrc: "/assets/screenshots/kiddojs.png"
             },
             {
                 name: "BTR (Bypass The Router)",
@@ -117,7 +124,8 @@ export const sections: Section[] = [
                 description: "A tool to help visualise the phase flow of a phsyical dashpot system.",
                 type: "website",
                 githubURL: "https://github.com/slippedandmissed/DashpotPhaseFlow",
-                liveURL: "https://slippedandmissed.github.io/DashpotPhaseFlow/"
+                liveURL: "https://slippedandmissed.github.io/DashpotPhaseFlow/",
+                screenshotSrc: "/assets/screenshots/dashpot.png"
             },
             {
                 name: "Rosanna",
@@ -170,7 +178,8 @@ export const sections: Section[] = [
                 name: "NoVals Code Golf",
                 description: "Write your code in as few characters as possible without using any raw values.",
                 type: "website",
-                liveURL: "http://novals.co.uk"
+                liveURL: "http://novals.co.uk",
+                screenshotSrc: "/assets/screenshots/novals.png"
             },
             {
                 name: "Doodle Jump Clone",

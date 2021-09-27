@@ -31,5 +31,12 @@
                 stroke-linecap="round" stroke-linejoin="miter"></path>
         </svg>
     </div>
-    
+    <div id="foreground">
+        <div id="navbar">
+            <a *ngFor="let section of sections" [routerLink]="section.path" routerLinkActive="active">{{section.title}}</a>
+        </div>
+        <div id="content" [@routeAnimations]="prepareRoute(outlet)">
+            <router-outlet #outlet="outlet"></router-outlet>
+        </div>
+    </div>
 </main>
