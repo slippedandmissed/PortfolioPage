@@ -16,7 +16,7 @@ const getModernChildren = (): Routes => {
     });
   }
   routes.push({
-    path: "**", component: ModernContentComponent, data: { animation: 0 }
+    path: "**", redirectTo: sections[0].path
   });
 
   return routes;

@@ -182,6 +182,29 @@ export class CliComponent implements AfterViewInit {
     }
   }
 
+  keydown(event: any) {
+    let keynum;
+
+    if (window.event) { // IE                  
+      keynum = event.keyCode;
+    } else if (event.which) { // Netscape/Firefox/Opera                 
+      keynum = event.which;
+    }
+
+    const char = String.fromCharCode(keynum);
+
+    if (["\n", "\r"].includes(char)) {
+      this.parseCommand();
+      return false;
+    }
+
+    if (char === "\t") {
+      this.tabComplete();
+      return false;
+    }
+
+    return true;
+  }
 
   // Transcribed from https://github.com/Cause-App/RegBelle/blob/main/belle/scriptparser.py
   private parseArgs(cmd: string, evenIfLastIsEmpty: boolean = false): string[] {
@@ -324,7 +347,7 @@ export class CliComponent implements AfterViewInit {
 
     node = node as directory;
 
-    const matches = Object.keys(node).filter(x => x.startsWith(partial)).map(x => "project" in (node as directory)[x] ? x : x+"/").sort();
+    const matches = Object.keys(node).filter(x => x.startsWith(partial)).map(x => "project" in (node as directory)[x] ? x : x + "/").sort();
 
     if (!matches.length) {
       return;
@@ -343,7 +366,7 @@ export class CliComponent implements AfterViewInit {
   }
 
   private descriptionOfType(type: projectType): string {
-    switch(type) {
+    switch (type) {
       case "java":
         return "Java project";
       case "pdf":
@@ -481,10 +504,10 @@ export class CliComponent implements AfterViewInit {
 
         title.classList.add("project-title");
         title.innerText = `${file.project.name}\n\n`;
-        
+
         description.classList.add("project-description");
         description.innerText = `${file.project.description}\n\n`;
-        
+
         output.appendChild(firstLine);
         output.appendChild(title);
         output.appendChild(description);
@@ -493,8 +516,8 @@ export class CliComponent implements AfterViewInit {
           const div: HTMLDivElement = document.createElement("div");
           const labelSpan: HTMLSpanElement = document.createElement("span");
           const anchor: HTMLAnchorElement = document.createElement("a");
-          labelSpan.innerText = label+": "; // non-breaking space
-          anchor.innerText = url.startsWith("/") ? window.location.href+url : url;
+          labelSpan.innerText = label + ": "; // non-breaking space
+          anchor.innerText = url.startsWith("/") ? window.location.href + url : url;
           anchor.href = url;
           anchor.target = "_blank";
           div.appendChild(labelSpan);
@@ -520,7 +543,7 @@ export class CliComponent implements AfterViewInit {
         }
 
         output.append(links);
-        
+
         return output;
       }
     }

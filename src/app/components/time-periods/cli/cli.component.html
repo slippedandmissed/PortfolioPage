@@ -1,5 +1,6 @@
-<main #main (click)="clicked()" (keydown.Tab)="tabComplete(); false;" (keydown.Enter)="parseCommand(); false;" (keydown.ArrowUp)="historyBack(); false;" (keydown.ArrowDown)="historyForwards(); false;">
-    <div #log ></div>
+<main #main (click)="clicked()" (keydown)="keydown($event)"
+    (keydown.ArrowUp)="historyBack(); false;" (keydown.ArrowDown)="historyForwards(); false;">
+    <div #log></div>
     <div class="prompt" #prompt id="prompt">
         <span class="hostname">{{username}}@{{hostname}}</span>
         <span class="separator">:</span>
