@@ -1,4 +1,4 @@
-<main>
+<main #main>
     <div id="background">
         <svg #background viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
@@ -40,3 +40,6 @@
         </div>
     </div>
 </main>
+<button id="top" (click)="scrollToTop()">
+    <fa-icon [icon]="faArrowUp"></fa-icon>
+</button>

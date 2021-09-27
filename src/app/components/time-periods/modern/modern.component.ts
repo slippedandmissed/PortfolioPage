@@ -3,6 +3,7 @@ import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { leftRightSlider } from 'src/app/data/animations';
 import { sections } from 'src/app/data/sections';
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-modern',
@@ -14,6 +15,7 @@ import { sections } from 'src/app/data/sections';
 })
 export class ModernComponent implements AfterViewInit {
 
+  @ViewChild("main") main?: ElementRef;
   @ViewChild("background") background?: ElementRef;
 
   constructor() { }
@@ -71,6 +73,15 @@ export class ModernComponent implements AfterViewInit {
 
   prepareRoute(outlet: RouterOutlet) {
     return outlet?.activatedRouteData?.['animation'];
+  }
+
+  faArrowUp = faArrowUp;
+
+  scrollToTop() {
+    this.main?.nativeElement.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
   }
 
 }
