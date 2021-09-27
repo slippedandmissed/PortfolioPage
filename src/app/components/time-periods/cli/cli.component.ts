@@ -190,7 +190,7 @@ export class CliComponent implements AfterViewInit {
     let inString: string | null = null;
     let escaping = false;
 
-    for (const i of cmd) {
+    for (const i of cmd.replace(/\n/g, "")) {
       if (inString !== null) {
         if (i === inString && !escaping) {
           inString = null;
